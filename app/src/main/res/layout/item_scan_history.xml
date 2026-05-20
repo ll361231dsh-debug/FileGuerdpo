@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Risk Color Indicator -->
+        <View
+            android:id="@+id/risk_color_indicator"
+            android:layout_width="4dp"
+            android:layout_height="48dp"
+            android:background="@color/risk_safe"
+            android:layout_marginEnd="12dp" />
+
+        <!-- File Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_item_file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="filename.docx"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/tv_item_file_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Microsoft Word"
+                android:textSize="12sp"
+                android:textColor="?android:textColorSecondary" />
+
+            <TextView
+                android:id="@+id/tv_item_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2024-01-01 12:00"
+                android:textSize="11sp"
+                android:textColor="?android:textColorTertiary" />
+        </LinearLayout>
+
+        <!-- Risk Level -->
+        <TextView
+            android:id="@+id/tv_item_risk_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Safe (0)"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

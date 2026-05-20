@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Risk Indicator -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center">
+
+                <com.fileguardpro.scanner.ui.scan.RiskIndicatorView
+                    android:id="@+id/risk_indicator"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp" />
+
+                <TextView
+                    android:id="@+id/tv_risk_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Safe"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_risk_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0/100"
+                    android:textSize="16sp"
+                    android:textColor="?android:textColorSecondary"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- File Info Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="File Information"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- File Name -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Name"
+                        android:textColor="?android:textColorSecondary" />
+                    <TextView
+                        android:id="@+id/tv_file_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="file.docx"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- File Type -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Type"
+                        android:textColor="?android:textColorSecondary" />
+                    <TextView
+                        android:id="@+id/tv_file_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Microsoft Word" />
+                </LinearLayout>
+
+                <!-- File Size -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Size"
+                        android:textColor="?android:textColorSecondary" />
+                    <TextView
+                        android:id="@+id/tv_file_size"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="0 KB" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Threat Indicators Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Threat Indicators"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_macro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚠ Macro"
+                        app:chipBackgroundColor="@color/chip_warning"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_links"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔗 External Links"
+                        app:chipBackgroundColor="@color/chip_warning"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_commands"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚡ Suspicious Commands"
+                        app:chipBackgroundColor="@color/chip_danger"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_hidden"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📁 Hidden Files"
+                        app:chipBackgroundColor="@color/chip_warning"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_javascript"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📜 JavaScript"
+                        app:chipBackgroundColor="@color/chip_danger"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_malicious"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="☠ Malicious Content"
+                        app:chipBackgroundColor="@color/chip_critical"
+                        android:visibility="gone" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No threats detected"
+                    android:textColor="@color/risk_safe"
+                    android:id="@+id/tv_no_threats" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_open_file"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open File"
+                android:layout_marginBottom="8dp"
+                app:icon="@drawable/ic_open" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_quarantine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quarantine File"
+                android:layout_marginBottom="8dp"
+                style="@style/Widget.Material3.Button.TonalButton"
+                app:icon="@drawable/ic_quarantine" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delete File"
+                android:layout_marginBottom="8dp"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:textColor="@color/risk_dangerous"
+                app:icon="@drawable/ic_delete"
+                app:iconTint="@color/risk_dangerous" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                style="@style/Widget.Material3.Button.TextButton" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

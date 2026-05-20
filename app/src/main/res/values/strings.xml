@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FileGuard Pro</string>
+    <string name="scan_with_fileguard">Scan with FileGuard</string>
+    <string name="scanning">Scanning…</string>
+    <string name="scan_complete">Scan Complete</string>
+    <string name="no_threats">No threats detected</string>
+    <string name="protected_status">Protected</string>
+    <string name="threats_detected">Threats Detected</string>
+</resources>
