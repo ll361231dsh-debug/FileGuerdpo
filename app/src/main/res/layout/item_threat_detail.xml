@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/glass_card">
+
+    <TextView
+        android:id="@+id/tv_threat_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Threat name"
+        android:textColor="@color/on_surface"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_threat_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High"
+        android:textColor="@color/error"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tv_threat_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="/path/to/file"
+        android:textColor="@color/on_surface"
+        android:layout_marginTop="4dp"
+        android:textSize="12sp" />
+
+</LinearLayout>
