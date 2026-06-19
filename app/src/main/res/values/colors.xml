@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#1565C0</color>
-    <color name="primary_dark">#0D47A1</color>
-    <color name="primary_light">#42A5F5</color>
-    <color name="accent">#00BCD4</color>
-
-    <color name="risk_safe">#4CAF50</color>
-    <color name="risk_low">#8BC34A</color>
-    <color name="risk_suspicious">#FF9800</color>
-    <color name="risk_dangerous">#FF5722</color>
-    <color name="risk_critical">#F44336</color>
-
-    <color name="chip_warning">#FFF3E0</color>
-    <color name="chip_danger">#FFEBEE</color>
-    <color name="chip_critical">#FCE4EC</color>
-
-    <color name="background_light">#FAFAFA</color>
-    <color name="surface_light">#FFFFFF</color>
-    <color name="background_dark">#121212</color>
-    <color name="surface_dark">#1E1E1E</color>
+    <color name="primary_color">#00E676</color>
+    <color name="primary_variant">#00C25A</color>
+    <color name="on_primary">#000000</color>
+    <color name="background_color">#071018</color>
+    <color name="surface_color">#0E1620</color>
+    <color name="on_surface">#E6EEF3</color>
+    <color name="accent">#1DE9B6</color>
+    <color name="error">#CF6679</color>
 </resources>

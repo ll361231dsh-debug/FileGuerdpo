@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.fileguardpro.scanner.ui.home.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/fileScannerFragment"
+        android:name="com.fileguardpro.scanner.ui.file.FileScannerFragment"
+        android:label="File Scanner" />
+
+    <fragment
+        android:id="@+id/urlScannerFragment"
+        android:name="com.fileguardpro.scanner.ui.url.UrlScannerFragment"
+        android:label="URL Scanner" />
+
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.fileguardpro.scanner.ui.reports.ReportsFragment"
+        android:label="Reports" />
+
+</navigation>

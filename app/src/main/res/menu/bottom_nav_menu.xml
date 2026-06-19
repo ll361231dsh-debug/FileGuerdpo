@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/fileScannerFragment"
+        android:icon="@drawable/ic_file_scan"
+        android:title="File Scanner" />
+
+    <item
+        android:id="@+id/urlScannerFragment"
+        android:icon="@drawable/ic_link"
+        android:title="URL Scanner" />
+
+    <item
+        android:id="@+id/reportsFragment"
+        android:icon="@drawable/ic_reports"
+        android:title="Reports" />
+
+</menu>
